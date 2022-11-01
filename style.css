@@ -1,0 +1,98 @@
+body {
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows : auto 1fr auto;
+    grid-template-columns:  150px 1fr 300px;
+    grid-template-areas:
+        "header header header"
+        "menu main sidebar"
+        "footer footer footer";   
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+}
+
+.primary-nav {
+    grid-area: menu;
+}
+
+.main-content {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.page-title {
+    color: Tomato;
+    font-size: 3em;
+    margin: .5em;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#primary-nav {
+    background: #ccc;
+}
+
+
+footer {
+    background: #77797c;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+article.reviews {
+    background-color: MediumSeaGreen;
+    border: 1px solid darkblue;
+}
+
+article.news {
+    background-color: lavenderblush;
+    border: 1px solid darkmagenta;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu li {
+    flex: 0 0 auto;
+    padding: 1em;
+    list-style: none;
+}
+
+.menu li:hover {
+    background: lightgreen;
+}
+
+.articles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.articles > article {
+    flex: 1 1 calc(33% - 2em);
+    padding: 1em;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+.block {
+    margin: 1em;
+    padding: 1em;
+    background: pink
+}
